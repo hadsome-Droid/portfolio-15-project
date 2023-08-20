@@ -39,6 +39,9 @@ const StyledMain = styled.section`
   background: #222;
 `
 const MainBlock = styled.div`
+  max-height: 507px;
+  max-width: 1108px;
+  background-image: linear-gradient(#4747474D, #838383), linear-gradient(#39393980, #0042FF0D);
   color: #FFF;
 `
 
