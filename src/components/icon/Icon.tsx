@@ -7,6 +7,7 @@ type IconPropsType = {
     width?: string
     height?: string
     viewBox?: string
+    fill?: string
 }
 export const Icon = (props: IconPropsType) => {
     return (
