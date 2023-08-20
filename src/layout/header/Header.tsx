@@ -16,7 +16,7 @@ export const Header = () => {
         </StyledHeader>
     );
 };
-const StyledHeader = styled.section`
+const StyledHeader = styled.header`
   background: #222;
   display: flex;
   justify-content: space-between;
