@@ -5,6 +5,7 @@ import {Main} from "./layout/sections/main/Main";
 import {Skills} from "./layout/sections/skills/Skills";
 import {Projects} from "./layout/sections/projects/Projects";
 import {About} from "./layout/sections/about/About";
+import {Services} from "./layout/sections/services/Services";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Skills/>
             <Projects/>
             <About/>
+            <Services/>
         </StyledApp>
     );
 }
