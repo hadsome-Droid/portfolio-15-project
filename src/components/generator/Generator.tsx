@@ -26,4 +26,9 @@ const StyledGenerator = styled.div`
   max-height: 394px;
   max-width: 270px;
   flex: 0 1 50%;
+
+  img {
+    max-height: 240px;
+    object-fit: cover;
+  }
 `

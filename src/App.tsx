@@ -1,10 +1,10 @@
 import './App.css';
 import styled from 'styled-components';
-import {Icon} from "./components/icon/Icon";
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/main/Main";
 import {Skills} from "./layout/sections/skills/Skills";
 import {Projects} from "./layout/sections/projects/Projects";
+import {About} from "./layout/sections/about/About";
 
 function App() {
     return (
@@ -13,6 +13,7 @@ function App() {
             <Main/>
             <Skills/>
             <Projects/>
+            <About/>
         </StyledApp>
     );
 }

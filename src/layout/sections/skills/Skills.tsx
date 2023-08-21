@@ -9,7 +9,7 @@ export const Skills = () => {
             <FlexWrapper content={'end'} gap={'20px'}>
                 <FlexWrapper direction={'column'}>
                     <SkillIconBox>
-                        <Icon iconId={'Ps'} viewBox={'3 3 27 27'} preserveAspectRatio={'none'}/>
+                        <Icon iconId={'Ps'} viewBox={'3 3 27 27'}/>
                     </SkillIconBox>
                     <SkillName>Photoshop</SkillName>
                 </FlexWrapper>
@@ -42,7 +42,7 @@ const StyledSkills = styled.section`
 `
 const SkillIconBox = styled.div`
 
-  
+
   svg {
     border: 10px solid #c02e2e;
     border-radius: 50%;

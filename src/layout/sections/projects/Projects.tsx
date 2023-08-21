@@ -15,7 +15,7 @@ export const Projects = () => {
         <StyledProjects>
             <ProjectsTitle>Projects</ProjectsTitle>
             <Menu itemsMenu={projectItems}/>
-            <FlexWrapper wrap={'wrap'}>
+            <FlexWrapper wrap={'wrap'} gap={'10px'}>
                 <Generator src={Proj1} text={'Story motion for sale \n' +
                     'English courses'}/>
                 <Generator src={Proj2} text={'Story motion for sale \n' +
