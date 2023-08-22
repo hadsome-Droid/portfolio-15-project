@@ -6,6 +6,7 @@ import {Skills} from "./layout/sections/skills/Skills";
 import {Projects} from "./layout/sections/projects/Projects";
 import {About} from "./layout/sections/about/About";
 import {Services} from "./layout/sections/services/Services";
+import {Learning} from "./layout/sections/learning/Learning";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Projects/>
             <About/>
             <Services/>
+            <Learning/>
         </StyledApp>
     );
 }
