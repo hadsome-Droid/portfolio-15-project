@@ -41,6 +41,6 @@ const StyledProjects = styled.section`
 
 `
 
-const ProjectsTitle = styled.h2`
+const ProjectsTitle = styled.h3`
 
 `

@@ -3,22 +3,35 @@ import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
 import {Logo} from "../../components/logo/Logo";
 import {Icon} from "../../components/icon/Icon";
+import {Container} from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
+import {theme} from "../../styles/Theme";
 
 const items = ['Home', 'Projects', 'About', 'Content']
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
-            <Menu itemsMenu={items}/>
-            <button>
-                <Icon iconId={'moon'}/>
-            </button>
+            <Container>
+                <FlexWrapper content={'space-between'} items={'center'}>
+                    <Logo/>
+                    <Menu itemsMenu={items}/>
+                    <button>
+                        <Icon iconId={'moon'} viewBox={'0 -5 33 33'}/>
+                    </button>
+                </FlexWrapper>
+            </Container>
         </StyledHeader>
     );
 };
 const StyledHeader = styled.header`
-  background: #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: ${theme.colors.dark.primaryBg};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+
+  button {
+
+  }
 `

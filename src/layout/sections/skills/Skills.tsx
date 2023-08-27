@@ -37,8 +37,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  background: #222;
-  color: white;
+
 `
 const SkillIconBox = styled.div`
 
