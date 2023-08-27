@@ -24,7 +24,7 @@ export const Header = () => {
     );
 };
 const StyledHeader = styled.header`
-  background-color: ${theme.colors.dark.primaryBg};
+    //background-color: ${theme.colors.dark.primaryBg};
   position: fixed;
   top: 0;
   left: 0;
