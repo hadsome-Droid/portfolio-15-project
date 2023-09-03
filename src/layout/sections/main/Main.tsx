@@ -62,7 +62,7 @@ const StyledBackground = styled.div`
 
 `
 const StyledMain = styled.section`
-  min-height: 100vh;
+  //min-height: 100vh;
 
   ${Container} {
     padding-top: 190px;
@@ -72,7 +72,7 @@ const StyledMain = styled.section`
     &::before {
       content: '';
       width: 468px;
-      height: 946px;
+      height: 925px;
       background: #24335C;
       top: 0;
       position: absolute;
@@ -133,7 +133,7 @@ const MainInfo = styled.p`
 const MainList = styled.ul`
   display: flex;
   gap: 32px;
-  margin-bottom: 74px;
+  margin-bottom: 46px;
 
 `
 const PhotoWrapper = styled.div`
