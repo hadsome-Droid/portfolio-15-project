@@ -2,31 +2,34 @@ import React from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/title/Title";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Learning = () => {
     return (
         <StyledLearning>
-            <FlexWrapper direction={'column'} content={'center'} items={'center'}>
-                <Title textTitle={'Learning'}/>
-            </FlexWrapper>
-            <div>
-                <h3>After Effects & Photoshop</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div>
-                <h3>After Effects & Photoshop</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+            <Container>
+                <FlexWrapper direction={'column'} content={'center'} items={'center'}>
+                    <Title textTitle={'Learning'}/>
+                </FlexWrapper>
+                <div>
+                    <h3>After Effects & Photoshop</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>After Effects & Photoshop</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </Container>
 
         </StyledLearning>
     );
