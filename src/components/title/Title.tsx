@@ -1,22 +1,17 @@
 import React from 'react';
-import styled from "styled-components";
-import {Icon} from "../icon/Icon";
+import { S } from './Title_Styles';
 
 type StyledTitlePropsType = {
     textTitle: string
 }
 
-export const Title = (props: StyledTitlePropsType) => {
+export const Title: React.FC<StyledTitlePropsType> = (props: StyledTitlePropsType) => {
     return (
         <>
-            <StyledTitle>
+            <S.Title>
                 {props.textTitle}
-            </StyledTitle>
-            <Icon iconId={'dot'}/>
+            </S.Title>
         </>
     );
 };
 
-const StyledTitle = styled.h2`
-
-`

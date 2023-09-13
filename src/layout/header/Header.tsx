@@ -14,7 +14,9 @@ export const Header = () => {
             <Container>
                 <FlexWrapper content={'space-between'} items={'center'}>
                     <Logo/>
-                    <Menu itemsMenu={items}/>
+                    <HeaderMenu>
+                        <Menu itemsMenu={items}/>
+                    </HeaderMenu>
                     <button>
                         <Icon iconId={'moon'} viewBox={'0 -5 33 33'}/>
                     </button>
@@ -32,6 +34,27 @@ const StyledHeader = styled.header`
   z-index: 99999;
 
   button {
+
+  }
+`
+const HeaderMenu = styled.nav`
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: end;
+  padding-right: 64px;
+
+  ul {
+    display: flex;
+    gap: 58px;
+  }
+  li {
+
+    a {
+
+    }
+    &:hover{
+      
+    }
 
   }
 `
