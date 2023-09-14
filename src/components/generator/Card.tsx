@@ -10,11 +10,13 @@ export const Card = (props: GeneratorPropsType) => {
     return (
         <StyledCard>
             <FlexWrapper direction={'column'}>
-                <img src={props.src} alt={props.src}/>
-                <p>{props.text}</p>
-                <FlexWrapper>
-                    <a href="">Edit for you</a>
-                    <a href="">see preview</a>
+                <ImageWrapper>
+                    <img src={props.src} alt={props.src}/>
+                </ImageWrapper>
+                <CardText>{props.text}</CardText>
+                <FlexWrapper gap={'30px'} content={'center'}>
+                    <CardLink href="">Edit for you</CardLink>
+                    <CardLink href="">see preview</CardLink>
                 </FlexWrapper>
             </FlexWrapper>
         </StyledCard>
@@ -30,9 +32,27 @@ const StyledCard = styled.div`
   border-radius: 26px;
   border: 1px solid red;
   overflow: hidden;
+  
+`
+const ImageWrapper = styled.div`
+  max-height: 240px;
+  overflow: hidden;
 
   img {
-    max-height: 240px;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
   }
+`
+const CardText = styled.p`
+  max-width: 204px;
+  margin: 0 auto;
+  font-family: Kalameh, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 17px 0;
+`
+const CardLink = styled.a`
+  padding-top: 12px;
+  margin-bottom: 27px;
 `

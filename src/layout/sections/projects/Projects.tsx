@@ -55,7 +55,10 @@ const StyledProjects = styled.section`
       height: 505px;
       background-image: url(${Dots});
       position: absolute;
+      //top: 10px;
       z-index: -1;
+      top: 88px;
+      left: 113px;
     }
   }
 `
@@ -64,7 +67,8 @@ const ProjectMenu = styled.nav`
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 41px;
   }
 
   li {
