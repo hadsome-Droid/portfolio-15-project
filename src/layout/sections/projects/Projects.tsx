@@ -11,8 +11,47 @@ import {Container} from "../../../components/Container";
 import {Title} from "../../../components/title/Title";
 import Dots from "../../../assets/images/Dots.png"
 import {theme} from "../../../styles/Theme";
+import Plaus from "../../../assets/images/+.svg"
+import {Icon} from "../../../components/icon/Icon";
 
 const projectItems = ['Story', 'Post', 'Banner', 'Trailer', 'Design', 'More']
+
+const projectData =[
+    {
+        src: Proj1,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj2,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj3,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj4,
+        projectInfo: 'Story motion for sale English courses'
+    },{
+        src: Proj1,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj2,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj3,
+        projectInfo: 'Story motion for sale English courses'
+    },
+    {
+        src: Proj4,
+        projectInfo: 'Story motion for sale English courses'
+    },
+
+]
+
+
 
 export const Projects = () => {
     return (
@@ -23,14 +62,11 @@ export const Projects = () => {
                     <Menu itemsMenu={projectItems}/>
                 </ProjectMenu>
                 <FlexWrapper content={'center'} wrap={'wrap'} gap={'38px'}>
-                    <Card src={Proj1} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj2} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj3} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj4} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj1} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj2} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj3} text={'Story motion for sale English courses'}/>
-                    <Card src={Proj4} text={'Story motion for sale English courses'}/>
+                    {projectData.map((p)=>{
+                        return (
+                            <Card src={p.src} text={p.projectInfo}/>
+                        )
+                    })}
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -38,6 +74,8 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
+  
+  padding-bottom: 100px;
   h2{
     padding-top: 60px;
     margin-bottom: 15px;
@@ -55,10 +93,24 @@ const StyledProjects = styled.section`
       height: 505px;
       background-image: url(${Dots});
       position: absolute;
-      //top: 10px;
       z-index: -1;
-      top: 88px;
-      left: 113px;
+      top: 90px;
+      left: 123px;
+    }
+    
+    &:after{
+      content: '';
+      display: block;
+      width: 383px;
+      height: 346px;
+      background-image: url(${Plaus});
+      background-repeat: no-repeat;
+      background-size: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      right: -26px;
+      bottom: -124px;
     }
   }
 `

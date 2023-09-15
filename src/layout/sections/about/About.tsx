@@ -11,7 +11,6 @@ export const About = () => {
         <StyledAbout>
             <Container>
                 <FlexWrapper>
-                    <div>
                         <FlexWrapper>
                             <a href=""><Icon iconId={'wa-white'} viewBox={'2 3 87 87'}/></a>
                             <a href=""><Icon iconId={'instagram'}/></a>
@@ -28,22 +27,67 @@ export const About = () => {
                                 <li>My phone number in Iran +989212073348</li>
                             </ul>
                         </FlexWrapper>
-                    </div>
-                    <img src={PhotoAbout} alt=""/>
                 </FlexWrapper>
+                {/*<WrapperImage>*/}
+                {/*    <img src={Map} alt="#"/>*/}
+                {/*    <img src={PhotoAbout} alt="#"/>*/}
+                {/*</WrapperImage>*/}
             </Container>
         </StyledAbout>
     );
 };
 
 const StyledAbout = styled.section`
-  max-height: 946px;
-  background-color: #A6BCFA;
-  background-image: url(${Map});
-  background-position: 66px, 517px, 67px, 42px;
-  background-repeat: no-repeat;
-  background-size: 676px, 624px;
+  //min-height: 946px;
+  
+
+  ${Container} {
+    position: relative;
+    height: 946px;
+    background-color: #A6BCFA;
+    
+    z-index: 0;
+
+    &:before{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 800px;
+      height: 800px;
+      background-image: url(${Map});
+      background-repeat: no-repeat;
+      background-size: cover;
+      //top: 70px;
+      //left: 41px;
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(${PhotoAbout});
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      top: 0;
+      left: 620px;
+      z-index: -1;
+    }
+  }
 `
+// const WrapperImage = styled.div`
+//   display: flex;
+//   overflow: hidden;
+//
+//
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+// `
 const StyledAboutTitle = styled.h2`
 
 `
