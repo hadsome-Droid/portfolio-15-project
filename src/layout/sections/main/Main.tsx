@@ -179,6 +179,7 @@ const MainLink = styled.a`
 
     svg {
       opacity: 1;
+      fill: white;
     }
   }
 

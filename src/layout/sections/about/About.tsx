@@ -5,7 +5,7 @@ import PhotoAbout from '../../../assets/images/projects/photo-about.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";
-import EllipseGradient from "../../../assets/images/EllipseGradient.svg"
+import {theme} from "../../../styles/Theme";
 
 const listItem = ['I was born in Iran-Mashhad',
     'I’m 20 years old',
@@ -37,7 +37,6 @@ export const About = () => {
                         </FlexWrapper>
                 </AboutInfo>
                 <WrapperImage>
-                    {/*<MapImage src={Map} alt="#"/>*/}
                     <PhotoImage src={PhotoAbout} alt="#"/>
                 </WrapperImage>
             </Container>
@@ -46,7 +45,6 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-  //min-height: 946px;
   
 
   ${Container} {
@@ -79,20 +77,26 @@ const AboutInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 491px;
   border-radius: 100px 0;
+  background-color: rgba(0, 71, 255, 0.05);
   border: 2px solid #FFF;
   position: relative;
   margin-bottom: 56px;
   margin-left: 10px;
   overflow: hidden;
-  padding-left: 30px;
+  padding-left: 58px;
+  padding-bottom: 55px;
+
   
   z-index: 0;
 
   & div:first-child{
     width: 100%;
     padding-top: 30px;
+  }
+  
+  & div:last-child{
+    padding-right: 41px;
   }
 
   &:before {
@@ -109,6 +113,8 @@ const AboutInfo = styled.div`
 `
 
 const WrapperImage = styled.div`
+  display: flex;
+  align-items: end;
   width: 800px;
   overflow: hidden;
 
@@ -120,9 +126,7 @@ const WrapperImage = styled.div`
     object-fit: cover;
   }
 `
-// const MapImage = styled.img`
-//   //position: absolute;
-// `
+
 const PhotoImage = styled.img`
 
 `
@@ -130,13 +134,20 @@ const PhotoImage = styled.img`
 const StyledAboutTitle = styled.h2`
   display: inline-block;
   max-width: 463px;
+  margin-bottom: 21px;
   color: #393939;
   font-size: 60px;
   font-weight: 700;
+
+  
+  span{
+    display: inline-block;
+    color: ${theme.colors.dark.accent};
+  }
   
 `
 const AboutList = styled.ul`
- //list-style-image: ${EllipseGradient};
+
   
 `
 const AboutListItem = styled.li`
@@ -144,7 +155,6 @@ const AboutListItem = styled.li`
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 10px;
-  margin: 0 auto;
   
   &:before{
     content: '';
