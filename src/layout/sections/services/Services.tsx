@@ -49,14 +49,15 @@ export const Services = () => {
 
 const StyledServices = styled.section`
   background: #222;
+
   ${Container} {
-  padding-top: 47px;
+    padding-top: 47px;
     padding-bottom: 97px;
-    
-    h2{
+
+    h2 {
       margin-bottom: 67px;
     }
-}
+  }
 `
 const ServiceBox = styled.div`
   width: 334px;
@@ -76,7 +77,7 @@ const IconWrapper = styled.div`
   }
 `
 const ServiceName = styled.h3`
-padding: 24px 0 31px 59px;
+  padding: 24px 0 31px 59px;
 `
 
 const ServiceLink = styled.a`

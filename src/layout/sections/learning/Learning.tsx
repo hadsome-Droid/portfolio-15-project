@@ -3,32 +3,31 @@ import styled from "styled-components";
 import {Title} from "../../../components/title/Title";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
+
+const learnItems = ['After Effects & Photoshop', 'Website , Html & cSS',]
 
 export const Learning = () => {
     return (
         <StyledLearning>
             <Container>
-                <FlexWrapper direction={'column'} content={'center'} items={'center'}>
+                <FlexWrapper content={'center'} items={'center'}>
                     <Title textTitle={'Learning'}/>
                 </FlexWrapper>
-                <div>
-                    <h3>After Effects & Photoshop</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>After Effects & Photoshop</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+
+                {learnItems.map((item)=> {
+                    return (
+                        <LearnBlock>
+                            <NameTechnology>{item}</NameTechnology>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </LearnBlock>
+                    )
+                })}
             </Container>
 
         </StyledLearning>
@@ -36,12 +35,20 @@ export const Learning = () => {
 };
 
 const StyledLearning = styled.section`
-  background: #24335C;
+  background-color: ${theme.colors.dark.secondaryBg};
+  
+  
+  ${Container}{
+    padding-top: 62px;
+    padding-bottom: 96px;
+  }
+  
 
   ul {
     display: flex;
     justify-content: right;
-    gap: 5px;
+    padding-right: 9px;
+    gap: 12px;
   }
 
   li {
@@ -51,4 +58,13 @@ const StyledLearning = styled.section`
     background: #D9D9D9;
     border-radius: 9px;
   }
+`
+const LearnBlock = styled.div`
+  padding-top: 51px;
+`
+const  NameTechnology = styled.h3`
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-left: 78px;
 `
