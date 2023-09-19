@@ -78,7 +78,8 @@ const StyledContact = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 800px;
+    height: 955px;
+    padding-bottom: 140px;
     
 }
   h2{
