@@ -2,29 +2,32 @@ import React from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/title/Title";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Icon} from "../../../components/icon/Icon";
 import Instagram from "../../../assets/images/social/instagram.256x256(1).png"
 import Telegram from "../../../assets/images/social/telegram.256x256(1).png"
 import Whatsapp from "../../../assets/images/social/whatsapp.256x256(1).png"
+import Location from "../../../assets/images/contactsUs/location.png"
+import Telephone from "../../../assets/images/contactsUs/telephone.png"
+import Email from "../../../assets/images/contactsUs/email.png"
 import {Container} from "../../../components/Container";
 
 const contactItems = [
     {
-        iconId: 'location',
+        src: Location,
         text: 'Location',
         contact: 'Mashhad/Iran'
     },
     {
-        iconId: 'phone',
+        src: Telephone,
         text: 'Phone',
         contact: '+989150063913'
     },
     {
-        iconId: 'mail',
+        src: Email,
         text: 'Email',
         contact: 'arkn3913@gmail.com'
     },
 ]
+const socialItems = [ Instagram, Whatsapp, Telegram]
 
 export const Contact = () => {
     return (
@@ -43,8 +46,8 @@ export const Contact = () => {
                         {contactItems.map((c) => {
                             return(
                                 <ContactBlock>
-                                    <Icon iconId={c.iconId}/>
-                                    <span>{c.text}</span>
+                                    <img src={c.src} alt="#"/>
+                                    <h3>{c.text}</h3>
                                     <span>{c.contact}</span>
                                 </ContactBlock>
                             )
@@ -54,16 +57,13 @@ export const Contact = () => {
                 </ContactCard>
 
                 <SocialContact>
-                    <SocialLink href="">
-                        <img src={Instagram} alt=""/>
-                    </SocialLink>
-                    <SocialLink href="">
-                        <img src={Whatsapp} alt=""/>
-                    </SocialLink>
-                    <SocialLink href="">
-                        <img src={Telegram} alt=""/>
-                    </SocialLink>
-
+                    {socialItems.map((elm)=>{
+                        return(
+                            <SocialLink href="">
+                                <img src={elm} alt=""/>
+                            </SocialLink>
+                        )
+                    })}
                 </SocialContact>
             </Container>
 
@@ -75,10 +75,14 @@ const StyledContact = styled.section`
   background: #222;
   
   ${Container}{
-  padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 800px;
+    
 }
   h2{
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
 `
 const ContactCard = styled.div`
@@ -87,7 +91,7 @@ const ContactCard = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 130px;
+  gap: 150px;
   padding-top: 53px;
   padding-bottom: 46px;
 `
@@ -139,21 +143,46 @@ const Button = styled.button`
 `
 
 const ContactBlock = styled.div`
- 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+  
+  img{
+    position: absolute;
+    left: -38px;
+    top: 0;
+  }
+  
+  h3{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  span{
+    color: #8B8B8B;
+    font-size: 12px;
+    font-weight: 400;
+  }
+    
 `
 
 const SocialContact = styled.div`
-
+  display: flex;
+  justify-content: space-between;
+  width: 142px;
+  margin: 0 auto;
 `
 
 const SocialLink = styled.a`
   width: 33px;
   height: 33px;
-  outline: 1px solid crimson;
   display: inline-block;
+  
 
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 `
